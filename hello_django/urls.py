@@ -19,5 +19,12 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/<nome>/<int:idade>', views.hello)
+    path('hello/<nome>/<int:idade>', views.hello),
+    path('calc/<int:n1>/<int:n2>/<op>', views.calc)
+    #poderia ser feito uma rota para cada operação, por exemplo:
+    # path('soma/<int:n1>/<int:n2>', views.calc)
+    # path('sub/<int:n1>/<int:n2>', views.calc)
+    # path('div/<int:n1>/<int:n2>', views.calc)
+    # path('multi/<int:n1>/<int:n2>', views.calc)
+    # caso fosse feito rotas separadas seria necessário criar defs separadas na view.
 ]
